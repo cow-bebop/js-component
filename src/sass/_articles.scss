@@ -1,0 +1,68 @@
+@import "_mediaqueries";
+
+//===================
+// 共通
+//===================
+h2 {
+  text-align: center;
+  font-size: 28px;
+  margin: 20px 0;
+}
+
+//===================
+// モーダルウィンドウ
+//===================
+.modal {
+  font-size: 14px;
+}
+
+.modal__open, .modal__close {
+  cursor: pointer;
+  width: 200px;
+  text-align: center;
+  padding: 12px 0;
+  margin: 16px auto 0;
+  border-radius: 4px;
+  transition: .3s all;
+  background: #dd2;
+}
+
+.modal__open:hover, .modal__close:hover {
+  opacity: .6;
+  transition: .3s all;
+}
+.modal__mask {
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.modal__mask.hidden {
+  display: none;
+}
+
+.modal__window {
+  background: #fff;
+  width: 300px;
+  padding: 20px;
+  border-radius: 4px;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  transition: .4s all;
+  z-index: 2;
+}
+
+.modal__window > p {
+  margin: 0 0 20px;
+}
+
+.modal__window.hidden {
+  transform: translate(0, -500px);
+}

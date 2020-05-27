@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+$pc_w: 1200px;
+$pc: 992px;
+$tab: 768px;
+$sp: 576px;
+
+$font-primary: "游ゴシック",
+"Yu Gothic",
+YuGothic,
+"メイリオ",
+"ヒラギノ角ゴ Pro W3",
+"Hiragino Kaku Gothic Pro",
+Meiryo,
+Osaka,
+"ＭＳ Ｐゴシック",
+"MS PGothic",
+sans-serif;
+$font-kozuka: "Kozuka Gothic Pr6N",
+"游ゴシック",
+"Yu Gothic",
+YuGothic,
+"メイリオ",
+"ヒラギノ角ゴ Pro W3",
+"Hiragino Kaku Gothic Pro",
+Meiryo,
+Osaka,
+"ＭＳ Ｐゴシック",
+"MS PGothic",
+sans-serif;
+
+$color-yellow: #c7b04e;
+$color-blue: #1e73a0;
+$color-lightBlue: #eaf7fe;
+$color-gray: #666666;
+$color-black: #333;
+
+@mixin pc_w {
+  @media screen and (max-width: ($pc_w)) {
+    @content;
+  }
+}
+
+@mixin pc {
+  @media screen and (max-width: ($pc)) {
+    @content;
+  }
+}
+
+@mixin tab {
+  @media screen and (max-width: ($tab)) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media screen and (max-width: ($sp)) {
+    @content;
+  }
+}
