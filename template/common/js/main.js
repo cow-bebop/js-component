@@ -1,7 +1,10 @@
 'use strict';
 
 {
+  //-----------------
   // モーダルウィンドウ
+  //-----------------
+
   const modalOpen = document.querySelector('.js-modal__open');
   const modalMask = document.querySelector('.js-modal__mask');
   const modalWindow = document.querySelector('.js-modal__window');
@@ -23,4 +26,29 @@
   modalMask.addEventListener('click', () => {
     modalClose.click();
   });
+
+  //-----------------
+  // navメニュー
+  //-----------------
+  const menuItems = document.querySelectorAll(".js-nav__menu li a");
+  const contents = document.querySelectorAll(".js-nav__content");
+
+  menuItems.forEach(clickedItem => {
+    clickedItem.addEventListener('click', e => {
+      e.preventDefault();
+
+      menuItems.forEach(item => {
+        item.classList.remove('active');
+      });
+
+      clickedItem.classList.add('active');
+
+      contents.forEach(content => {
+        content.classList.remove('active');
+      });
+
+      document.getElementById(clickedItem.dataset.id).classList.add('active');
+    });
+  })
+
 }
